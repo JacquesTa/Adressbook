@@ -1,0 +1,101 @@
+<section class="heading-section">
+  <h1 class="title is-1 has-text-centered">ReCo</h1>
+</section>
+
+<div class="container">
+  <div class="add-contact-box">
+    <form>
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input class="input" type="text" placeholder="Enter contact..." />
+        </p>
+        <p class="control">
+          <button class="button is-info alt-btn">
+            <i class="material-icons">search</i> Search
+          </button>
+        </p>
+      </div>
+      <div>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Name" />
+                <span class="icon is-small is-left">
+                  <i class="material-icons">person</i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control is-expanded has-icons-left has-icons-right">
+                <input
+                  class="input is-success"
+                  type="email"
+                  placeholder="Email"
+                />
+                <span class="icon is-small is-left">
+                  <i class="material-icons">mail</i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Address" />
+                <span class="icon is-small is-left">
+                  <i class="material-icons">home</i>
+                </span>
+              </p>
+            </div>
+            <div class="field has-addons">
+              <p class="control">
+                <a class="button is-static"> +49 </a>
+              </p>
+              <p class="control is-expanded">
+                <input
+                  class="input"
+                  type="tel"
+                  placeholder="Your phone number"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-grouped is-grouped-centered">
+          <p class="control">
+            <button class="button is-primary alt-btn">
+              <i class="material-icons">done</i>
+              Submit
+            </button>
+          </p>
+          <p class="control">
+            <button class="button is-light alt-btn">
+              <i class="material-icons">delete</i>Cancel
+            </button>
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contacts-list">
+      <div class="contact-items" *ngFor="let contact of contacts">
+        <div class="contact-text">{{ contact.text }}</div>
+        <div class="contact-controls-box">
+          <div class="contact-controls-button is-danger">
+            <i class="material-icons">edit</i>
+          </div>
+          <div class="contact-controls-button is-danger">
+            <i class="material-icons">delete</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
